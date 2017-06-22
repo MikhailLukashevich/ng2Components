@@ -1,3 +1,26 @@
-<p>
-  my-table works!
-</p>
+<h1>
+  {{title}}
+</h1>
+
+<td>
+  <tr *ngFor="let product of ProductList">
+    <table>
+      <tr>
+          <td>
+              <table><tr><td>{{product.id}}</td></tr>
+              </table>
+          </td>
+          <td>
+              <table><tr><td>{{product.name}}</td></tr> 
+              </table>
+          </td>
+          <td>
+              <table><tr><td>{{product.price}}</td></tr>
+              </table>
+          </td>
+      </tr>
+    </table>
+  </tr>
+</td>
+
+

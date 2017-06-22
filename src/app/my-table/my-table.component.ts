@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 import {Products} from './products';
 
 const PRODUCTS: Products[] = [
@@ -18,11 +18,9 @@ const PRODUCTS: Products[] = [
   templateUrl: './my-table.component.html',
   styleUrls: ['./my-table.component.css']
 })
-export class MyTableComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+export class MyTableComponent {
+  
+  title = "My table";
+  ProductList: Products[] = PRODUCTS;
+  rows: number = Products.length;
 }
