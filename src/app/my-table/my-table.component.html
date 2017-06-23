@@ -2,25 +2,21 @@
   {{title}}
 </h1>
 
-<td>
-  <tr *ngFor="let product of ProductList">
-    <table>
+<div class="bs-example">
+  <table class="table table-striped">
+    <thead>
       <tr>
-          <td>
-              <table><tr><td>{{product.id}}</td></tr>
-              </table>
-          </td>
-          <td>
-              <table><tr><td>{{product.name}}</td></tr> 
-              </table>
-          </td>
-          <td>
-              <table><tr><td>{{product.price}}</td></tr>
-              </table>
-          </td>
+        <th>#</th>
+        <th> Name</th>
+        <th> Price</th>
       </tr>
-    </table>
-  </tr>
-</td>
-
-
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of ProductList; let i = index">
+          <th *ngIf="i < rows">{{product.id}}</th>
+          <td *ngIf="i < rows">{{product.name}}</td>
+          <td *ngIf="i < rows">{{product.price}}</td>
+        </tr>
+    </tbody>
+  </table>
+</div>

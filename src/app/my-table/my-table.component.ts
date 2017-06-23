@@ -1,4 +1,4 @@
-import { Component} from '@angular/core';
+import { Component, Input} from '@angular/core';
 import {Products} from './products';
 
 const PRODUCTS: Products[] = [
@@ -16,11 +16,12 @@ const PRODUCTS: Products[] = [
 @Component({
   selector: 'my-table',
   templateUrl: './my-table.component.html',
-  styleUrls: ['./my-table.component.css']
+  styleUrls: ['./my-table.component.css'],
+  inputs: ["rows"] 
 })
 export class MyTableComponent {
   
   title = "My table";
   ProductList: Products[] = PRODUCTS;
-  rows: number = Products.length;
+  rows: number = PRODUCTS.length;
 }
